@@ -1,0 +1,59 @@
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-gradient">
+        <div class="container-fluid">
+            <div class="w-100"></div>
+            <div class="navbar-nav justify-content-center">
+                <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo">
+                <div class="navbar-title">
+                    <h1 class="navbar-title-provincia">Provincia</h1>
+                    <h1 class="navbar-title-microcreditos">Microcréditos</h1>
+                </div>
+            </div>
+            <div class="w-100"></div>
+        </div>
+    </nav>
+
+    <!-- Google bar -->
+    <div class="google">
+        <div id="google-bar">
+            <form method="get" action="http://www.google.com/search" target="_blank">
+                <img id="google-logo" src="../../assets/logoGoogle.gif" alt="Google">
+                <input id="google-input" type="search" name="q" maxlength="255" value=""
+                    placeholder="Buscar en Google o escribir una URL">
+                <button id="google-button" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid-container" #dropListContainer cdkDropListGroup>
+        <!-- <div class="row"> -->
+        <div *ngFor="let site of sitesList; let i = index" cdkDropList [cdkDropListData]="i">
+            <!-- col-lg-2 col-md-1.7 col-sm-3 col-3 -->
+            <div class=" btn-site hvr-grow">
+                <!--Drag and Drop
+                        cdkDrag
+                        [cdkDragData]="i"
+                        (cdkDragEntered)="dragEntered($event)"
+                        (cdkDragMoved)="dragMoved($event)"
+                        (cdkDragDropped)="dragDropped($event)" -->
+
+                <a href={{sitesList[i].href}} target="_blank">
+                    <div class="btn-site-circle d-flex justify-content-center align-items-center">
+                        <img class="btn-site-logo img-fluid p-1" src={{sitesList[i].imgPath}}>
+                    </div>
+                    <h5 class="site-name">{{sitesList[i].name}}</h5>
+                </a>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="bicentenary p-3"><img src="../../assets/logo200BP.svg"
+                alt="logo 200 años del Banco de la Provincia de Buenos Aires"></div>
+    </footer>
+</body>
