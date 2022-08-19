@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit {
     {
       name: "Reportes",
       imgPath: "../../assets/logoBI.png",
-      href: "https://provmicro.azurewebsites.net/paginas/tecnologia/"
+      href: "https://provmicro.azurewebsites.net"
     },
     {
       name: "Banco Provincia",

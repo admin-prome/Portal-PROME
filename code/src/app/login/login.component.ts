@@ -24,22 +24,23 @@ export class LoginComponent implements OnInit {
     google.accounts.id.initialize({
       client_id: "204765225602-rj2pblpnnn9kr7iqm6phgbjoke9ut8qc.apps.googleusercontent.com",
       callback: this.handleCredentialResponse.bind(Response)
-    }); 
+    })
 
     google.accounts.id.renderButton(
       document.getElementById("login-btn"),
       { size: "large", type: "standard", shape: "pill" }  // customization attributes
     );
    
+    // google.accounts.id.disableAutoSelect();
     this.router.navigate(['home']);
   }
 
   handleCredentialResponse(response: any) {
-    //Do what you wish with the received idToken
-    // console.log(response.credential);
+    //received idToken
+    console.log(response.credential);
     localStorage.setItem("token", response.credential);
 
-    // This next is for decoding the idToken to an object if you want to see the details.
+    //decoding the idToken to an object to see the details
     let base64Url = response.credential.split('.')[1];
     let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
     let jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
