@@ -2,6 +2,10 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Site } from '../classes/site';
 import { CdkDragDrop, CdkDragEnter, CdkDragMove, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Client } from '../classes/client';
+import { ClientService } from '../services/client.service';
+
+declare var google: any;
 
 @Component({
   selector: 'app-home',
@@ -11,9 +15,13 @@ import { CdkDragDrop, CdkDragEnter, CdkDragMove, moveItemInArray } from '@angula
 export class HomeComponent implements OnInit {
 
   site: Site;
+  client: Client;
+  access_token: any;
+  pathTriangles = "../../assets/triangles.png";
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private clientService: ClientService) {
     this.site = new Site();
+    this.client = new Client();
   }
 
   public sitesList: Array<Site> = [
@@ -75,7 +83,7 @@ export class HomeComponent implements OnInit {
     {
       name: "Reportes",
       imgPath: "../../assets/logoBI.png",
-      href: "https://provmicro.azurewebsites.net"
+      href: "https://provmicro.azurewebsites.net/paginas/tecnologia/"
     },
     {
       name: "Banco Provincia",
@@ -90,10 +98,66 @@ export class HomeComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+    this.login();
+    
+  }
+
+  login(): any {
+
+    const googleClient = google.accounts.oauth2.initTokenClient({
+      client_id: '204765225602-rj2pblpnnn9kr7iqm6phgbjoke9ut8qc.apps.googleusercontent.com',
+      scope: 'https://www.googleapis.com/auth/cloud-platform',
+      callback: (response: { access_token: null; }) => {
+        this.access_token = response.access_token;
+        console.log("access token: ", this.access_token);
+      },
+    });
+
+    console.log("google client", googleClient);
+
+    google.accounts.id.initialize({
+      client_id: "204765225602-rj2pblpnnn9kr7iqm6phgbjoke9ut8qc.apps.googleusercontent.com",
+      callback: this.handleCredentialResponse.bind(Response)
+    });
+
+    google.accounts.id.renderButton(
+      document.getElementById("login-btn"),
+      { size: "large", type: "standard", shape: "pill" }
+    );
+  }
+
+  handleCredentialResponse(response: any): any {
+    var client = new Client();
+
+    let base64Url = response.credential.split('.')[1];
+    let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    let jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    const responsePayload = JSON.parse(jsonPayload);
+
+    console.log("ID responsePayload: " + responsePayload.sub);
+    console.log('Full Name responsePayload: ' + responsePayload.name);
+    console.log('Given Name responsePayload: ' + responsePayload.given_name);
+    console.log('Family Name responsePayload: ' + responsePayload.family_name);
+    console.log("Image URL responsePayload: " + responsePayload.picture);
+    console.log("Email responsePayload: " + responsePayload.email);
+
+    client.id = responsePayload.sub;
+    client.name = responsePayload.name;
+
+    console.log("id del cliente: ", client.id);
+    console.log("nombre del cliente: ", client.name);
+  }
+
+  logout() {
+    google.accounts.id.disableAutoSelect();
+    console.log("logout ok");
+    this.router.navigateByUrl("login");    
   }
 
   @ViewChild('dropListContainer') dropListContainer?: ElementRef;
-
 
   dropListReceiverElement?: HTMLElement;
   dragDropInfo?: {
