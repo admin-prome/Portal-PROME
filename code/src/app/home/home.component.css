@@ -1,17 +1,6 @@
 /**** LOGIN COMPONENT ****/
 
-.login-btn {
-    
-    border-style: none;
-    position: absolute;
-    top:60vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
-    background-color: #f4f4f4;
-}
-body {
+.login {
     height: 100vh;
     margin: 0;
     display: flex;
@@ -20,7 +9,8 @@ body {
     background-color: #f4f4f4;
     overflow: hidden;
 }
-/* .triangles-bottom-box {
+
+.triangles-bottom-box {
     height: 100vh;
     display: flex;
     align-items: flex-end;
@@ -28,7 +18,7 @@ body {
 
 .triangles-bottom {
     width: 25vw;
-    min-width: 250px;   
+    min-width: 250px;
 }
 
 .triangles-center {
@@ -176,7 +166,6 @@ body {
     }
 }
 
-
 @media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
 
     .triangles-top {
@@ -190,11 +179,14 @@ body {
     .login-img {
         height: 4rem;
     }
-} */
+}
 
 /**** HOME COMPONENT ****/
-.body-home{
-    display: none;
+.home {
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 1rem;
 }
 
 h1 {
@@ -358,7 +350,6 @@ input[type="search"]:focus {
 
 .btn-site-logo {
     width: 5vw;
-    /* height: auto; */
     justify-content: center;
 }
 

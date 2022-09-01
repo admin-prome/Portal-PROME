@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -17,9 +18,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DragDropModule
+    DragDropModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

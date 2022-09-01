@@ -1,102 +1,89 @@
 <!-- <app-login></app-login> -->
+
 <body>
-    <app-login></app-login>
-    <button class="login-btn" id="login-btn"></button> 
-    <div class="body-home" id="body-home">
-<!-- 
-     <div class="triangles-bottom-box">
-        <img class="triangles-bottom animate__animated animate__fadeInLeft" src={{pathTriangles}}
-            alt="Elemento gráfico">
-    </div>
-    <div class="login-div">
-        <div class="login-title">
-            <img class="login-img" src="../../assets/logoColorP.png" alt="Logo Provincia Microcréditos">
-            <div class="login-title-prome">
-                <h1 class="login-title-provincia">Provincia</h1>
-                <h1 class="login-title-microcreditos">Microcréditos</h1>
-            </div>
-        </div> 
-        <button class="login-btn" id="login-btn"></button>  -->
-        <!-- (click)="login()" -->
-        <!-- <div id="g_id_onload">
-
-        </div> -->
-        <!-- <button (click)="logout()">chau</button> -->
-        <!-- <button onclick="client.requestAccessToken();">Authorize me</button> -->
-
-        
-    <!-- </div> -->
-    <!-- <div class="triangles-top-box">
-        <img class="triangles-top animate__animated animate__fadeInRight" src={{pathTriangles}} alt="Elemento gráfico">
-    </div>  -->
-
-
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand navbar-gradient">
-        <div class="container-fluid">
-            <div class="w-100"></div>
-            <div class="navbar-nav justify-content-center">
-                <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo">
-                <div class="navbar-title">
-                    <h1 class="navbar-title-provincia">Provincia</h1>
-                    <h1 class="navbar-title-microcreditos">Microcréditos</h1>
+    <div class="login" id="login">
+        <div class="triangles-bottom-box">
+            <img class="triangles-bottom animate__animated animate__fadeInLeft" src={{pathTriangles}}
+                alt="Elemento gráfico">
+        </div>
+        <div class="login-div">
+            <div class="login-title">
+                <img class="login-img" src="../../assets/logoColorP.png" alt="Logo Provincia Microcréditos">
+                <div class="login-title-prome">
+                    <h1 class="login-title-provincia">Provincia</h1>
+                    <h1 class="login-title-microcreditos">Microcréditos</h1>
                 </div>
             </div>
-            <div class="w-100 navbar-nav justify-content-end">
-                <button class="navbar-logout-btn hvr-grow" (click)="logout()"><i class="fas fa-sign-out-alt"></i></button>
-                <!-- (click)="logout()" -->
-            </div>
-            <div class="w-100"></div>
+            <button class="login-btn" id="login-btn"></button>
         </div>
-    </nav>
-
-    <button (click)="logout()"> botonnn</button>
-
-
-    <!-- Google bar -->
-    <div class="google">
-        <div id="google-bar">
-            <form method="get" action="http://www.google.com/search" target="_blank">
-                <img id="google-logo" src="../../assets/logoGoogle.gif" alt="Google">
-                <input id="google-input" type="search" name="q" maxlength="255" value=""
-                    placeholder="Buscar en Google o escribir una URL">
-                <button id="google-button" type="submit"><i class="fa fa-search"></i></button>
-            </form>
+        <div class="triangles-top-box">
+            <img class="triangles-top animate__animated animate__fadeInRight" src={{pathTriangles}}
+                alt="Elemento gráfico">
         </div>
     </div>
 
-    <!-- Grid -->
+   
+    <div class="home" id="home">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand navbar-gradient">
+            <div class="container-fluid">
+                <div class="w-100"></div>
+                <div class="navbar-nav justify-content-center">
+                    <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo">
+                    <div class="navbar-title">
+                        <h1 class="navbar-title-provincia">Provincia</h1>
+                        <h1 class="navbar-title-microcreditos">Microcréditos</h1>
+                    </div>
+                </div>
+                <div class="w-100 navbar-nav justify-content-end">
+                    <button class="navbar-logout-btn hvr-grow" (click)="logout()"><i
+                            class="fas fa-sign-out-alt"></i></button>
+                </div>
+            </div>
+        </nav>
 
-    <div class="grid-container" #dropListContainer cdkDropListGroup>
-        <!-- <div class="row"> -->
-        <div *ngFor="let site of sitesList; let i = index" cdkDropList [cdkDropListData]="i">
+        <!-- Google bar -->
+        <div class="google">
+            <div id="google-bar">
+                <form method="get" action="http://www.google.com/search" target="_blank">
+                    <img id="google-logo" src="../../assets/logoGoogle.gif" alt="Google">
+                    <input id="google-input" type="search" name="q" maxlength="255" value=""
+                        placeholder="Buscar en Google o escribir una URL">
+                    <button id="google-button" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
 
-            <div class="col-lg-2 col-md-1.7 col-sm-3 col-3 btn-site hvr-grow">
-                <!--Drag and Drop
+        <!-- Grid -->
+        <div class="grid-container" #dropListContainer cdkDropListGroup>
+            <!-- <div class="row"> -->
+            <div *ngFor="let site of sitesList; let i = index" cdkDropList [cdkDropListData]="i">
+
+                <div class="col-lg-2 col-md-1.7 col-sm-3 col-3 btn-site hvr-grow">
+                    <!--Drag and Drop
                         cdkDrag 
                         [cdkDragData]="i"
                         (cdkDragEntered)="dragEntered($event)" 
                         (cdkDragMoved)="dragMoved($event)"
                         (cdkDragDropped)="dragDropped($event)" -->
 
-                <a href={{sitesList[i].href}} target="_blank">
-                    <div class="btn-site-circle d-flex justify-content-center align-items-center">
-                        <img class="btn-site-logo img-fluid p-1" src={{sitesList[i].imgPath}}>
-                    </div>
-                    <h5 class="site-name">{{sitesList[i].name}}</h5>
-                </a>
+                    <a href={{sitesList[i].href}} target="_blank">
+                        <div class="btn-site-circle d-flex justify-content-center align-items-center">
+                            <img class="btn-site-logo img-fluid p-1" src={{sitesList[i].imgPath}}>
+                        </div>
+                        <h5 class="site-name">{{sitesList[i].name}}</h5>
+                    </a>
+                </div>
             </div>
+            <!-- </div> -->
         </div>
-        <!-- </div> -->
-    </div>
 
 
-    <!-- Footer -->
-   <footer>
+        <!-- Footer -->
+        <footer>
             <div class="bicentenary p-3"><img src="../../assets/logo200BP.svg"
                     alt="logo 200 años del Banco de la Provincia de Buenos Aires"></div>
-    </footer>
+        </footer>
 
     </div>
 </body>
