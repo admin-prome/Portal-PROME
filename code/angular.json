@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portal-prome": {
+    "Portal-Prome": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portal-prome:build:production"
+              "browserTarget": "Portal-Prome:build:production"
             },
             "development": {
-              "browserTarget": "portal-prome:build:development"
+              "browserTarget": "Portal-Prome:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portal-prome:build"
+            "browserTarget": "Portal-Prome:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "portal-prome"
+  "defaultProject": "Portal-Prome"
 }

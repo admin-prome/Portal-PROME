@@ -4,31 +4,37 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
     overflow: hidden;
 }
 
-.triangles-bottom-box {
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-style: none;
+    background-color: #E5E5E5;
+    
+    
+}
+
+.triangles-top-box {
     height: 100vh;
     display: flex;
     align-items: flex-end;
 }
 
-.triangles-bottom {
+.triangles-top {
     width: 25vw;
     min-width: 250px;
 }
 
-.triangles-center {
-    display: none;
-}
-
-.triangles-top-box {
+.triangles-bottom-box {
     height: 100vh;
     display: flex-start;
 }
 
-.triangles-top {
+.triangles-bottom {
     width: 25vw;
     min-width: 250px;
 }
@@ -48,7 +54,7 @@ body {
     text-align: center;
     width: 50vw;
     height: 30vh;
-    align-content: space-between;
+    align-content:space-between;
 }
 
 .login-title {
@@ -57,6 +63,12 @@ body {
     height: 70%;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
+}
+
+.login-img {
+    width: auto;
+    height: 100%;
 }
 
 .login-title-prome {
@@ -64,15 +76,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 2rem;
+    margin-left: 1.2rem;
     vertical-align: middle;
     height: 100%;
     width: auto;
-}
-
-.login-img {
-    width: auto;
-    height: 100%;
 }
 
 .login-title-provincia {
@@ -87,36 +94,18 @@ body {
 
 .login-btn {
     justify-content: center;
-    border-style: none;
-    position: relative;
-    margin-top: 4rem;
+    align-items: center;
 }
 
-.login-btn:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 0px;
-    height: 100%;
-    background: rgba(229, 229, 229, 0.1);
-    transition: all 1s ease;
-    border-radius: 30px;
-}
+/* @media (max-width: 992px) {
+    
+    .login-img {
+        height: 7rem;
+    }
 
-.login-btn:hover:before {
-    width: 100%;
-    border-radius: 30px;
-}
+} */
 
 @media (max-width: 720px) {
-
-    .triangles-bottom {
-        min-width: 250px;
-        position: absolute;
-        bottom: 0.5rem;
-        left: 0.5rem;
-    }
 
     .triangles-top-box {
         height: 100vh;
@@ -130,40 +119,40 @@ body {
         right: 0.5rem;
     }
 
-    .login-img {
-        height: 6rem;
+    .triangles-bottom {
+        min-width: 250px;
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0.5rem;
     }
 
+    .login-img {
+        height: 6rem;
+    } 
+
     .login-title-provincia {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .login-title-microcreditos {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .login-img {
-        height: 4rem;
+        font-size: 2.5rem;
     }
 }
 
 @media (max-width: 380px) {
+    
     .login-img {
-        height: 3rem;
+        height: 4rem;
     }
 
     .login-title-provincia {
         font-size: 1.25rem;
-
     }
 
     .login-title-microcreditos {
         font-size: 1.25rem;
     }
 }
-
 
 @media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
 

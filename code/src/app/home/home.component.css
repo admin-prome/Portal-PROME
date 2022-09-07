@@ -1,188 +1,4 @@
-/**** LOGIN COMPONENT ****/
-
-.login {
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4;
-    overflow: hidden;
-}
-
-.triangles-bottom-box {
-    height: 100vh;
-    display: flex;
-    align-items: flex-end;
-}
-
-.triangles-bottom {
-    width: 25vw;
-    min-width: 250px;
-}
-
-.triangles-center {
-    display: none;
-}
-
-.triangles-top-box {
-    height: 100vh;
-    display: flex-start;
-}
-
-.triangles-top {
-    width: 25vw;
-    min-width: 250px;
-}
-
-.animate__animated.animate__fadeInLeft {
-    --animate-duration: 2s;
-}
-
-.animate__animated.animate__fadeInRight {
-    --animate-duration: 2s;
-}
-
-.login-div {
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 50vw;
-    height: 30vh;
-    align-content: space-between;
-}
-
-.login-title {
-    display: flex;
-    width: 100%;
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-title-prome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 2rem;
-    vertical-align: middle;
-    height: 100%;
-    width: auto;
-}
-
-.login-img {
-    width: auto;
-    height: 100%;
-}
-
-.login-title-provincia {
-    font-weight: 650;
-    font-size: 3rem;
-}
-
-.login-title-microcreditos {
-    font-weight: 500;
-    font-size: 3rem;
-}
-
-.login-btn {
-    justify-content: center;
-    border-style: none;
-    position: relative;
-    margin-top: 4rem;
-}
-
-.login-btn:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 0px;
-    height: 100%;
-    background: rgba(229, 229, 229, 0.1);
-    transition: all 1s ease;
-    border-radius: 30px;
-}
-
-.login-btn:hover:before {
-    width: 100%;
-    border-radius: 30px;
-}
-
-@media (max-width: 720px) {
-
-    .triangles-bottom {
-        min-width: 250px;
-        position: absolute;
-        bottom: 0.5rem;
-        left: 0.5rem;
-    }
-
-    .triangles-top-box {
-        height: 100vh;
-        display: flex;
-    }
-
-    .triangles-top {
-        min-width: 250px;
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-    }
-
-    .login-img {
-        height: 6rem;
-    }
-
-    .login-title-provincia {
-        font-size: 1.5rem;
-    }
-
-    .login-title-microcreditos {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .login-img {
-        height: 4rem;
-    }
-}
-
-@media (max-width: 380px) {
-    .login-img {
-        height: 3rem;
-    }
-
-    .login-title-provincia {
-        font-size: 1.25rem;
-
-    }
-
-    .login-title-microcreditos {
-        font-size: 1.25rem;
-    }
-}
-
-@media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
-
-    .triangles-top {
-        min-width: 180px;
-    }
-
-    .triangles-bottom {
-        min-width: 180px;
-    }
-
-    .login-img {
-        height: 4rem;
-    }
-}
-
-/**** HOME COMPONENT ****/
-.home {
+body {
     justify-content: center;
     position: relative;
     min-height: 100vh;
@@ -410,6 +226,14 @@ footer {
         font-size: 17.5px;
     }
 
+    .grid-container{
+        padding: 0 1rem;
+    }
+
+    .grid-container {
+        gap: 0.5rem;
+    }
+
     .btn-site {
         width: 18vw;
     }
@@ -424,6 +248,20 @@ footer {
         width: 45px;
         justify-content: center;
         padding: 2px;
+    }
+
+    .site-name {
+        text-align: center;
+        white-space: normal;
+        word-wrap: normal;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 639px) {
+
+    .grid-container{
+        padding: 1rem 1rem;
     }
 
     .grid-container {
@@ -452,6 +290,10 @@ footer {
 
     .navbar-title-microcreditos {
         font-size: 14px;
+    }
+
+    .google{
+        height: 18vh;
     }
 
     .btn-site-circle {
@@ -566,72 +408,4 @@ footer {
         word-wrap: normal;
         font-size: 0.4rem;
     }
-}
-
-/*Drag and drop Classes*/
-/* 
-.cdk-drag-preview {
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-        0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
-}
-
-.cdk-drag-placeholder {
-    opacity: 0.3;
-}
-
-.cdk-drag-animating {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-button {
-    margin-right: 4px;
-}
-
-.example-box-placeholder {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    background: #ccc;
-    border: dotted 3px #999;
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-.drop-list-item {
-    display: flex;
-    flex-direction: row;
 } 
-
-.btn-site {
-    
-    margin-top: 30px;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        padding-bottom: 3vw;
-    
-    
-        width: 200px;
-        height: 200px;
-        border: solid 1px #ccc;
-        font-size: 30pt;
-        font-weight: bold;
-        color: rgba(0, 0, 0, 0.87);
-        cursor: move;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: #fff;
-        border-radius: 4px;
-        position: relative;
-        z-index: 1;
-        transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
-        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-            0 1px 5px 0 rgba(0, 0, 0, 0.12);
-        }
-
-*/

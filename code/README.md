@@ -19,7 +19,7 @@ El login debe realizarse con una cuenta de google.
 ## Instalación
 
 ```
-$ git clone https://github.com/millanmj/Portal-PROME.git
+$ git clone https://github.com/millanmj/Pagina-Inicio-PROME.git
 $ cd ../path/to/the/file
 $ npm install
 $ ng serve
