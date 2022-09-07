@@ -14,8 +14,6 @@ button {
     width: 100%;
     border-style: none;
     background-color: #E5E5E5;
-    
-    
 }
 
 .triangles-top-box {
@@ -97,13 +95,12 @@ button {
     align-items: center;
 }
 
-/* @media (max-width: 992px) {
-    
-    .login-img {
-        height: 7rem;
-    }
+@media (max-width: 5000px) {
 
-} */
+    .login-img {
+        height: 8rem;
+    }
+}
 
 @media (max-width: 720px) {
 

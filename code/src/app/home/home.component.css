@@ -226,7 +226,7 @@ footer {
         font-size: 17.5px;
     }
 
-    .grid-container{
+    .grid-container {
         padding: 0 1rem;
     }
 
@@ -260,7 +260,7 @@ footer {
 
 @media (max-width: 639px) {
 
-    .grid-container{
+    .grid-container {
         padding: 1rem 1rem;
     }
 
@@ -292,7 +292,7 @@ footer {
         font-size: 14px;
     }
 
-    .google{
+    .google {
         height: 18vh;
     }
 
@@ -408,4 +408,4 @@ footer {
         word-wrap: normal;
         font-size: 0.4rem;
     }
-} 
+}
