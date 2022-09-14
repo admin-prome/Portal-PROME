@@ -3,13 +3,15 @@
     <nav class="navbar navbar-expand navbar-gradient">
         <div class="container-fluid">
             <div class="w-100"></div>
-            <div class="navbar-nav justify-content-center">
-                <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo">
-                <div class="navbar-title">
-                    <h1 class="navbar-title-provincia">Provincia</h1>
-                    <h1 class="navbar-title-microcreditos">Microcréditos</h1>
+            <a href="https://www.provinciamicrocreditos.com.ar/" target="_blank">
+                <div class="navbar-nav justify-content-center">
+                    <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo">
+                    <div class="navbar-title">
+                        <h1 class="navbar-title-provincia">Provincia</h1>
+                        <h1 class="navbar-title-microcreditos">Microcréditos</h1>
+                    </div>            
                 </div>
-            </div>
+            </a>
             <!-- <div class="w-100 navbar-nav justify-content-end">
                 <button class="navbar-logout-btn hvr-grow" (click)="logout()"><i
                         class="fas fa-sign-out-alt"></i></button>
@@ -33,7 +35,7 @@
     <!-- Grid -->
     <div class="grid-container">
         <div *ngFor="let site of sitesList; let i = index">
-            <div class="col-lg-2 col-md-1.7 col-sm-3 col-3 btn-site hvr-grow">
+            <div class="btn-site hvr-grow">
                 <a href={{sitesList[i].href}} target="_blank">
                     <div class="btn-site-circle d-flex justify-content-center align-items-center">
                         <img class="btn-site-logo img-fluid p-1" src={{sitesList[i].imgPath}}>
@@ -45,6 +47,7 @@
     </div>
 
     <!-- Footer -->
+
     <footer>
         <div class="bicentenary p-3"><img src="../../assets/logo200BP.svg"
                 alt="logo 200 años del Banco de la Provincia de Buenos Aires"></div>

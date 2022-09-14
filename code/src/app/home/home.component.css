@@ -131,13 +131,19 @@ input[type="search"]:focus {
 }
 
 .grid-container {
+    display: grid;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 2rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 1.5rem;
     padding: 1.5rem 1rem;
-    display: flex;
-    justify-content: center;
+    margin-bottom:0.8rem;
+    /* display: flex;
+    justify-content: center; */
     width: 100vw;
 }
 

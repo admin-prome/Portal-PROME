@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   public sitesList: Array<Site> = [
+    
     {
       name: "Gmail",
       imgPath: "../../assets/logoGmail.png",
@@ -96,7 +97,7 @@ export class HomeComponent implements OnInit {
     {
       name: "Reportes",
       imgPath: "../../assets/logoBI.png",
-      href: "https://provmicro.azurewebsites.net"
+      href: "https://app.powerbi.com/view?r=eyJrIjoiMjVjMDg2MTUtMTllMC00NDQ3LWI2M2QtNjk2OWI4ZmJjYjE5IiwidCI6ImEwNmI2YWVjLWE3NjItNDQ1NS1hZDdhLThhMzRhZmI4NmZkNCIsImMiOjR9&pageName=ReportSection"
     },
     {
       name: "Banco Provincia",
@@ -104,10 +105,27 @@ export class HomeComponent implements OnInit {
       href: "https://www.bancoprovincia.com.ar/home"
     },
     {
+      name: "Provincia Microcréditos",
+      imgPath: "../../assets/logoColorPSmall.png",
+      href: "https://365.provinciamicroempresas.com"
+    },
+    {
       name: "CRM",
       imgPath: "../../assets/logoCRM.png",
       href: "https://365.provinciamicroempresas.com"
-    }
+    },
+    {
+      name: "Campus Virtual",
+      imgPath: "../../assets/logoCampus.png",
+      href: "https://campus.provinciamicrocreditos.com"
+    },
+    {
+      name: "Promesa Rec",
+      imgPath: "../../assets/logoDescuentos.png",
+      href: "https://promesa-rec.gointegro.com"
+    },
+    
+    
   ]
 
   logout() {
