@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Site } from '../classes/site';
 import { Client } from '../classes/client';
 import { CookieService } from 'ngx-cookie-service';
+import { ReportesComponent } from '../reportes/reportes.component';
 
 declare var google: any;
 
@@ -62,12 +63,14 @@ export class HomeComponent implements OnInit {
     {
       name: "Visma",
       imgPath: "../../assets/logoVisma.png",
-      href: "https://payroll.vismalatam.com/rhprox2/newhome/selfservice.aspx?idp=provinciamicroempresas&tenant=provinciamicroempresas"
+      href: "https://payroll.vismalatam.com/rhprox2/newhome/selfservice.aspx?idp=provinciamicroempresas&tenant=provinciamicroempresas",
+      
     },
     {
       name: "Tu Recibo",
       imgPath: "../../assets/logoTuRecibo.png",
-      href: "https://promesa.turecibo.com/e/login"
+      href: "https://promesa.turecibo.com/e/login",
+      
     },
     {
       name: "Rendiciones",
@@ -97,7 +100,7 @@ export class HomeComponent implements OnInit {
     {
       name: "Reportes",
       imgPath: "../../assets/logoBI.png",
-      href: "https://app.powerbi.com/view?r=eyJrIjoiMjVjMDg2MTUtMTllMC00NDQ3LWI2M2QtNjk2OWI4ZmJjYjE5IiwidCI6ImEwNmI2YWVjLWE3NjItNDQ1NS1hZDdhLThhMzRhZmI4NmZkNCIsImMiOjR9&pageName=ReportSection"
+      href: "../reportes"
     },
     {
       name: "Banco Provincia",
@@ -122,6 +125,21 @@ export class HomeComponent implements OnInit {
     {
       name: "Promesa Rec",
       imgPath: "../../assets/logoDescuentos.png",
+      href: "https://promesa-rec.gointegro.com"
+    },
+    {
+      name: "Google Meet",
+      imgPath: "../../assets/logoMeet.png",
+      href: "https://promesa-rec.gointegro.com"
+    },
+    {
+      name: "Google Chat",
+      imgPath: "../../assets/logoChat.png",
+      href: "https://promesa-rec.gointegro.com"
+    },
+    {
+      name: "Google Drive",
+      imgPath: "../../assets/logoDrive.png",
       href: "https://promesa-rec.gointegro.com"
     },
     

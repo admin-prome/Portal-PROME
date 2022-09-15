@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 // import { GoogleLoginProvider, SocialLoginModule } from 'angularx-social-login';
 import { CookieService } from 'ngx-cookie-service';
+import { ReportesComponent } from './reportes/reportes.component';
 // import { DragDropModule } from '@angular/cdk/drag-drop'
 
 @NgModule({
@@ -14,6 +15,7 @@ import { CookieService } from 'ngx-cookie-service';
     AppComponent,
     // LoginComponent,
     HomeComponent,
+    ReportesComponent,
   ],
   imports: [
     BrowserModule,

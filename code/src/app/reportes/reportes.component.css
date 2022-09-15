@@ -134,7 +134,7 @@ input[type="search"]:focus {
     display: grid;
     /* grid-template-rows: 1fr 1fr; */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -199,6 +199,16 @@ input[type="search"]:focus {
 .hvr-grow:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.btn-return{
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    border-style: none;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(39, 157, 46, 1) 0%, rgba(38, 186, 195, 1) 88%);
+
 }
 
 footer {
