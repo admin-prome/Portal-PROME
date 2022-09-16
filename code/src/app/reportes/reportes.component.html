@@ -2,7 +2,11 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand navbar-gradient">
         <div class="container-fluid">
-            <div class="w-100"></div>
+            <div class="w-100 navbar-nav justify-content-start">
+                <button class="navbar-logout-btn hvr-grow" routerLink="/home"><i
+                        class="fas fa-arrow-left"></i></button>
+            </div> 
+            
             <a href="https://www.provinciamicrocreditos.com.ar/" target="_blank">
                 <div class="navbar-nav justify-content-center">
                     <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo">
@@ -12,25 +16,9 @@
                     </div>            
                 </div>
             </a>
-            <!-- <div class="w-100 navbar-nav justify-content-end">
-                <button class="navbar-logout-btn hvr-grow" routerLink="../heroes"><i
-                        class="fas fa-sign-out-alt"></i></button>
-            </div>  -->
             <div class="w-100"></div>
         </div>
     </nav>
-
-    <!-- Google bar -->
-    <!-- <div class="google">
-        <div id="google-bar">
-            <form method="get" action="http://www.google.com/search" target="_blank">
-                <img id="google-logo" src="../../assets/logoGoogle.gif" alt="Google">
-                <input id="google-input" type="search" name="q" maxlength="255" value=""
-                    placeholder="Buscar en Google o escribir una URL">
-                <button id="google-button" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-    </div> -->
 
     <!-- Grid -->
     <div class="grid-container">
@@ -44,14 +32,9 @@
                 </a>
             </div>
         </div>
-    </div><button class="btn-return" routerLink="/home"><i class="fas fa-arrow-left"></i></button>
-
-    <div>
-
     </div>
 
     <!-- Footer -->
-
     <footer>
         <div class="bicentenary p-3"><img src="../../assets/logo200BP.svg"
                 alt="logo 200 años del Banco de la Provincia de Buenos Aires"></div>

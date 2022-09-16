@@ -135,12 +135,13 @@ input[type="search"]:focus {
     /* grid-template-rows: 1fr 1fr; */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 200rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
+    gap: 1rem;
+    /* padding: 1.5rem 1rem; */
+    padding: 0.2rem 2rem;
     margin-bottom:0.8rem;
     /* display: flex;*/
     justify-content: center; 
@@ -154,7 +155,7 @@ input[type="search"]:focus {
     text-align: center;
     margin: auto;
     padding-bottom: 0vw;
-    width: 12vw;
+    width: 11vw;
 }
 
 .btn-site-circle {

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Site } from '../classes/site';
 import { Client } from '../classes/client';
-import { CookieService } from 'ngx-cookie-service';
 import { ReportesComponent } from '../reportes/reportes.component';
 
 declare var google: any;
@@ -17,21 +16,9 @@ export class HomeComponent implements OnInit {
   site: Site;
   client: Client;
 
-  constructor(private router: Router, public cookieService: CookieService) {
+  constructor(private router: Router) {
     this.site = new Site();
     this.client = new Client();
-    
-    console.log("cookies del home: ", cookieService.get('client-id'));
-    var cookie = cookieService.get('client-id');
-
-    // if(cookie == ""){
-    //   this.router.navigateByUrl("login");
-    //   console.log("cookie vacía, redireccionando a login...");
-    // }
-    // else
-    // {
-    //   this.router.navigateByUrl("home");
-    // }
   }
 
   ngOnInit(): void {
@@ -39,7 +26,6 @@ export class HomeComponent implements OnInit {
   }
 
   public sitesList: Array<Site> = [
-    
     {
       name: "Gmail",
       imgPath: "../../assets/logoGmail.png",
@@ -49,6 +35,21 @@ export class HomeComponent implements OnInit {
       name: "Calendario",
       imgPath: "../../assets/logoGoogleCalendar.png",
       href: "https://calendar.google.com/calendar/u/0/r?tab=mc"
+    },
+    {
+      name: "Google Meet",
+      imgPath: "../../assets/logoMeet.png",
+      href: "https://meet.google.com/"
+    },
+    {
+      name: "Google Chat",
+      imgPath: "../../assets/logoChat.png",
+      href: "https://mail.google.com/chat/u/0/#chat/welcome"
+    },
+    {
+      name: "Google Drive",
+      imgPath: "../../assets/logoDrive.png",
+      href: "https://drive.google.com/drive/my-drive"
     },
     {
       name: "Jira",
@@ -126,30 +127,7 @@ export class HomeComponent implements OnInit {
       name: "Promesa Rec",
       imgPath: "../../assets/logoDescuentos.png",
       href: "https://promesa-rec.gointegro.com"
-    },
-    {
-      name: "Google Meet",
-      imgPath: "../../assets/logoMeet.png",
-      href: "https://promesa-rec.gointegro.com"
-    },
-    {
-      name: "Google Chat",
-      imgPath: "../../assets/logoChat.png",
-      href: "https://promesa-rec.gointegro.com"
-    },
-    {
-      name: "Google Drive",
-      imgPath: "../../assets/logoDrive.png",
-      href: "https://promesa-rec.gointegro.com"
-    },
-    
+    },   
     
   ]
-
-  logout() {
-    google.accounts.id.disableAutoSelect();
-    this.cookieService.delete('client-id');
-    console.log("cookie eliminada");
-    this.router.navigateByUrl("login");
-  }
 }
