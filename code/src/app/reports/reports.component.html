@@ -1,0 +1,36 @@
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand navbar-gradient">
+    <div class="container-fluid">
+      <div class="w-100 navbar-nav justify-content-start">
+        <button class="navbar-logout-btn hvr-grow" routerLink="/home">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+      </div>
+      <a href="https://www.provinciamicrocreditos.com.ar/" target="_blank">
+        <div class="navbar-nav justify-content-center">
+          <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo" />
+          <div class="navbar-title">
+            <h1 class="navbar-title-provincia">Provincia</h1>
+            <h1 class="navbar-title-microcreditos">Microcréditos</h1>
+          </div>
+        </div>
+      </a>
+      <div class="w-100"></div>
+    </div>
+  </nav>
+
+  <!-- Grid -->
+  <div class="grid-container">
+    <div *ngFor="let site of sitesList; let i = index">
+      <div class="btn-site hvr-grow">
+        <a target="_blank" href="{{ sitesList[i].href }}">
+          <div class="btn-site-circle d-flex justify-content-center align-items-center">
+            <img class="btn-site-logo img-fluid p-1" src="{{ sitesList[i].imgPath }}" />
+          </div>
+          <h5 class="site-name">{{ sitesList[i].name }}</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>

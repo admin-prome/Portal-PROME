@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ReportsComponent } from './reports/reports.component';
+// import { LoginComponent } from './login/login.component';
 // import { GoogleLoginProvider, SocialLoginModule } from 'angularx-social-login';
-import { CookieService } from 'ngx-cookie-service';
-import { ReportesComponent } from './reportes/reportes.component';
+// import { CookieService } from 'ngx-cookie-service';
 // import { DragDropModule } from '@angular/cdk/drag-drop'
 
 @NgModule({
@@ -15,7 +15,7 @@ import { ReportesComponent } from './reportes/reportes.component';
     AppComponent,
     // LoginComponent,
     HomeComponent,
-    ReportesComponent,
+    ReportsComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +23,7 @@ import { ReportesComponent } from './reportes/reportes.component';
     // SocialLoginModule,
     // DragDropModule
   ],
-  providers: [CookieService],
+  providers: [], //providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
