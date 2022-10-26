@@ -8,9 +8,11 @@ import { Site } from "../../classes/site";
 })
 export class HomeComponent {
   site: Site;
-
+  username = localStorage.getItem("username");
+  
   constructor() {
     this.site = new Site();
+    localStorage.setItem("username", "Colaborador");  
   }
 
   public sitesList: Array<Site> = [
