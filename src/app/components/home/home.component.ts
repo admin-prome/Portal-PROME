@@ -12,7 +12,7 @@ export class HomeComponent {
   
   constructor() {
     this.site = new Site();
-    sessionStorage.setItem("username", "Colaborador");  
+    // sessionStorage.setItem("username", "Colaborador");  
   }
 
   public sitesList: Array<Site> = [
