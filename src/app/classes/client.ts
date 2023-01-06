@@ -1,4 +1,4 @@
 export class Client {
     id: string = '';
-    name: string = '';
+    givenName: string = '';
 }

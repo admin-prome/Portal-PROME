@@ -6,20 +6,16 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { LoginGuard } from './guards/login.guard';
 import { AuthService } from './services/auth.service';
 
-// authService: AuthService;
-
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [LoginGuard] },
-  { path: 'reports', component: ReportsComponent }
+  { path: 'reports', component: ReportsComponent, canActivate: [LoginGuard] }
 ];
-
-// {authService : AuthService}
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

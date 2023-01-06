@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, Input, OnChanges, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthService } from "src/app/services/auth.service";
 import { Site } from "../../classes/site";
 
 @Component({
@@ -9,10 +11,9 @@ import { Site } from "../../classes/site";
 export class HomeComponent {
   site: Site;
   username = sessionStorage.getItem("username");
-  
-  constructor() {
+
+  constructor(private router: Router, private authService: AuthService) {
     this.site = new Site();
-    // sessionStorage.setItem("username", "Colaborador");  
   }
 
   public sitesList: Array<Site> = [
@@ -43,7 +44,7 @@ export class HomeComponent {
     },
     {
       name: "Jira",
-      imgPath: "../../assets/logoJira.svg",
+      imgPath: "../../assets/logoJira.png",
       href: "https://provinciamicroempresas.atlassian.net/jira/your-work",
     },
     {
@@ -88,13 +89,13 @@ export class HomeComponent {
     },
     {
       name: "Banco Provincia",
-      imgPath: "../../assets/logo200BP.svg",
+      imgPath: "../../assets/logo200BP.png",
       href: "https://www.bancoprovincia.com.ar/home",
     },
     {
       name: "Provincia Microcréditos",
       imgPath: "../../assets/logoColorPSmall.png",
-      href: "https://365.provinciamicroempresas.com",
+      href: "https://www.provinciamicrocreditos.com.ar/",
     },
     {
       name: "Campus Virtual",
@@ -117,4 +118,9 @@ export class HomeComponent {
       href: "https://provinciamicrocreditos.perfomap.com/",
     },
   ];
+
+  logout() {
+    this.authService.logout();
+    this.router.navigateByUrl("login");
+  }
 }

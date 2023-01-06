@@ -8,22 +8,25 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginGuard implements CanActivate {
 
-  constructor(private authService: AuthService, private router: Router) {
-    
+  constructor(private router: Router, private authService: AuthService) {
   }
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    if (this.authService.isAuthenticated()) {
-      this.router.navigateByUrl('home');
-      return true;
+    if (!Boolean(this.authService.isAuthenticated())) {
+      return this.router.parseUrl("login");
     }
-    else {
-      this.router.navigateByUrl('login');
-      return false;
-    }
+    return Boolean(this.authService.isAuthenticated());
 
+
+    // if (AuthService.isAuthenticated()) {
+    //   return true;
+    // }
+    // else {
+    //   this._router.navigateByUrl('login');
+    //   return false;
+    // }
   }
-
 }

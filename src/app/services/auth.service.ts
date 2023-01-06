@@ -5,20 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  static loggedIn: boolean;
-
   constructor() {
   }
 
-  login() {
-    AuthService.loggedIn = true;
+  isAuthenticated() {
+    return sessionStorage.getItem("username");
   }
 
   logout() {
-    AuthService.loggedIn = false;
+    return sessionStorage.setItem("username", '');
+    // return localStorage.removeItem('username');
   }
 
-  isAuthenticated() {
-    return AuthService.loggedIn;
-  }
 }

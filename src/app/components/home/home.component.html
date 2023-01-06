@@ -2,7 +2,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand navbar-gradient">
         <div class="container-fluid">
-            <div class="w-100"></div>
+            <div class="w-100 navbar-nav justify-content-start navbar-username">¡Hola {{this.username}}!</div>
             <a href="https://www.provinciamicrocreditos.com.ar/">
                 <div class="navbar-nav justify-content-center">
                     <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo">
@@ -12,12 +12,10 @@
                     </div>
                 </div>
             </a>
-            <!-- <div class="w-100 navbar-nav justify-content-end">
-                <button class="navbar-logout-btn hvr-grow" (click)="logout()"><i
+            <div class="w-100 navbar-nav justify-content-end">
+                <button (click)="logout()" class="navbar-logout-btn hvr-grow"><i
                         class="fas fa-sign-out-alt"></i></button>
-            </div> -->
-            <div class="w-100 navbar-nav justify-content-end navbar-username">¡Hola {{this.username}}!</div>
-            
+            </div>
         </div>
     </nav>
 
@@ -36,10 +34,11 @@
     <!-- Grid -->
     <div class="grid-container">
         <div *ngFor="let site of sitesList; let i = index">
-            <div class="btn-site hvr-grow">
-                <a href={{sitesList[i].href}} target="_blank">
+            <div class="btn-site hvr-grow animate__animated animate__fadeIn">
+                <a href={{sitesList[i].href}}>
                     <div class="btn-site-circle d-flex justify-content-center align-items-center">
-                        <img class="btn-site-logo img-fluid p-1" src={{sitesList[i].imgPath}}>
+                        <img class="btn-site-logo img-fluid p-1 animate__animated animate__fadeIn"
+                            src={{sitesList[i].imgPath}}>
                     </div>
                     <h5 class="site-name">{{sitesList[i].name}}</h5>
                 </a>
