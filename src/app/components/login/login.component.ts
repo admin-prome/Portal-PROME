@@ -1,5 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { Client } from '../../classes/client';
+import { UserService } from 'src/app/services/user.service';
+import { environment } from 'src/environments/environment';
 
 declare var google: any;
 
@@ -11,16 +12,16 @@ declare var google: any;
 export class LoginComponent implements AfterViewInit {
 
   pathTriangles = "../../assets/triangles.png";
-  client: Client;
+  _userService: UserService;
 
-  constructor() {
-    this.client = new Client();
+  constructor(private userService: UserService) {
+    this._userService = userService;
   }
 
   ngAfterViewInit(): void {
     google.accounts.id.initialize({
-      client_id: "204765225602-rj2pblpnnn9kr7iqm6phgbjoke9ut8qc.apps.googleusercontent.com",
-      callback: this.handleCredentialResponse
+      client_id: environment.client_id,
+      callback: this.handleCredentialResponse.bind(Response, this._userService)
     });
     google.accounts.id.renderButton(
       document.getElementById("login-btn"),
@@ -28,7 +29,7 @@ export class LoginComponent implements AfterViewInit {
     );
   }
 
-  handleCredentialResponse(response: any) {
+  handleCredentialResponse(userService: UserService, response: any) {
 
     if (response.credential) {
       let base64Url = response.credential.split('.')[1];
@@ -39,7 +40,15 @@ export class LoginComponent implements AfterViewInit {
 
       const responsePayload = JSON.parse(jsonPayload);
       sessionStorage.setItem("username", responsePayload.given_name);
+      // sessionStorage.setItem("email", responsePayload.email);
       document.location.href = "home";
+
+      // userService.getSectorByEmail(sessionStorage.getItem("email")).subscribe(response => {
+      //   if (response.code == '200') {
+      //     sessionStorage.setItem("sector", response.result);
+      //     document.location.href = "home";
+      //   }
+      // }, error => console.error("error: ", error.message))
     }
   }
 }

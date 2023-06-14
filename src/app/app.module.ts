@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReportsComponent } from './components/reports/reports.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 // import { LoginComponent } from './login/login.component';
@@ -19,7 +20,8 @@ import { ReportsComponent } from './components/reports/reports.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
     // DragDropModule
   ],
   providers: [],

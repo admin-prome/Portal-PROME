@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  client_id: "204765225602-rj2pblpnnn9kr7iqm6phgbjoke9ut8qc.apps.googleusercontent.com",
+  // prome_users_API_user: "https://promeusersapi.azurewebsites.net/PromeUsersAPI/GetSectorByEmail?userEmail=",
+  prome_users_API_user: "https://localhost:44369/PromeUsersAPI/GetSectorByEmail?userEmail=",
+  azure_function_URI: "https://vmreboothandler.azurewebsites.net/api/VMRebootHandler?code=nnCfTeSgMDtmkD0D0A_HqAWA14Y-eAh0uP94Ixt8ltyJAzFuv5QJCw==",
+  azure_function_key: "nnCfTeSgMDtmkD0D0A_HqAWA14Y-eAh0uP94Ixt8ltyJAzFuv5QJCw=="
 };
 
 /*

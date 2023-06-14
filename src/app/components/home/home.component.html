@@ -32,9 +32,15 @@
     </div>
 
     <!-- Grid -->
-    <div class="grid-container">
-        <div *ngFor="let site of sitesList; let i = index">
+    <div class="grid-container"><!--#dropListContainer cdkDropListGroup-->
+        <div *ngFor="let site of sitesList; let i = index"><!--cdkDropList [cdkDropListData]="i"-->
             <div class="btn-site hvr-grow animate__animated animate__fadeIn">
+                <!-- cdkDrag
+                cdkDragBoundary=".grid-container"
+                [cdkDragData]="i"
+                (cdkDragEntered)="dragEntered($event)"
+                (cdkDragMoved)="dragMoved($event)"
+                (cdkDragDropped)="dragDropped($event)"> -->
                 <a href={{sitesList[i].href}}>
                     <div class="btn-site-circle d-flex justify-content-center align-items-center">
                         <img class="btn-site-logo img-fluid p-1 animate__animated animate__fadeIn"
@@ -45,4 +51,18 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+    <!-- <div class="example-container" cdkDropListGroup>
+        <div cdkDropList [cdkDropListEnterPredicate]="dropListEnterPredicate" (cdkDropListDropped)="dropListDropped($event)"></div>
+        <div cdkDropList *ngFor="let item of items"
+             [cdkDropListEnterPredicate]="dropListEnterPredicate" (cdkDropListDropped)="dropListDropped($event)">
+          <div cdkDrag class="example-box" (cdkDragMoved)="dragMoved($event);">{{item}}</div>
+        </div>
+      </div>  -->
 </body>

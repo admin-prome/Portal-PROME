@@ -99,6 +99,16 @@ h1 {
     align-items: center;
 }
 
+.version {
+    font-family: 'Encode Sans', sans-serif;
+    color: #279D2E;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+}
+
 @media (max-width: 5000px) {
 
     .login-img {
@@ -138,6 +148,10 @@ h1 {
     .login-title-microcreditos {
         font-size: 2.5rem;
     }
+
+    .version {
+        display: none;
+    }
 }
 
 @media (max-width: 380px) {
@@ -153,6 +167,10 @@ h1 {
     .login-title-microcreditos {
         font-size: 1.25rem;
     }
+
+    .version {
+        display: none;
+    }
 }
 
 @media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -167,5 +185,9 @@ h1 {
 
     .login-img {
         height: 4rem;
+    }
+
+    .version {
+        display: none;
     }
 }
