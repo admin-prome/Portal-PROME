@@ -133,7 +133,7 @@ export class HomeComponent implements OnInit{
     },
     {
       name: "Banco Provincia",
-      imgPath: "../../assets/logo200BP.png",
+      imgPath: "../../assets/logoBancoProvinciaSmall.png",
       href: "https://www.bancoprovincia.com.ar/home",
       //sectors: []
     },
