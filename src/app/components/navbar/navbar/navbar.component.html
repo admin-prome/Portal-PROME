@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand navbar-gradient">
+    <div class="container-fluid">
+        <div class="w-100 navbar-nav justify-content-start navbar-username">¡Hola {{this.username}}!</div>
+        <a href="https://www.provinciamicrocreditos.com.ar/">
+            <div class="navbar-nav justify-content-center">
+                <img class="navbar-logo" src="../../assets/logoWhiteP.png" alt="logo">
+                <div class="navbar-title">
+                    <h1 class="navbar-title-provincia">Provincia</h1>
+                    <h1 class="navbar-title-microcreditos">Microcréditos</h1>
+                </div>
+            </div>
+        </a>
+        <div class="w-100 navbar-nav justify-content-end">
+            <button (click)="navigateTo('home')" class="navbar-logout-btn hvr-grow"><i class="fas fa-home"></i></button>
+            <button (click)="logout()" class="navbar-logout-btn hvr-grow"><i
+                    class="fas fa-sign-out-alt"></i></button>
+            
+        </div>
+    </div>
+</nav>

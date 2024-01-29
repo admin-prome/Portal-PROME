@@ -66,9 +66,9 @@ export class HomeComponent implements OnInit{
       //sectors: []
     },
     {
-      name: "Google Chat",
-      imgPath: "../../assets/logoChat.png",
-      href: "https://mail.google.com/chat/u/0/#chat/welcome",
+      name: "Legajo Digital",
+      imgPath: "../../assets/legajoDigital.png",
+      href: "../herramientas/tableros/legajo-digital",
       //sectors: []
     },
     {

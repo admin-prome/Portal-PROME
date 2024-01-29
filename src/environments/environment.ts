@@ -8,7 +8,9 @@ export const environment = {
   // prome_users_API_user: "https://promeusersapi.azurewebsites.net/PromeUsersAPI/GetSectorByEmail?userEmail=",
   prome_users_API_user: "https://localhost:44369/PromeUsersAPI/GetSectorByEmail?userEmail=",
   azure_function_URI: "https://vmreboothandler.azurewebsites.net/api/VMRebootHandler?code=nnCfTeSgMDtmkD0D0A_HqAWA14Y-eAh0uP94Ixt8ltyJAzFuv5QJCw==",
-  azure_function_key: "nnCfTeSgMDtmkD0D0A_HqAWA14Y-eAh0uP94Ixt8ltyJAzFuv5QJCw=="
+  azure_function_key: "nnCfTeSgMDtmkD0D0A_HqAWA14Y-eAh0uP94Ixt8ltyJAzFuv5QJCw==",
+  serviciosTecnoUrl: "url",
+  tecnoKey: "maxi"
 };
 
 /*

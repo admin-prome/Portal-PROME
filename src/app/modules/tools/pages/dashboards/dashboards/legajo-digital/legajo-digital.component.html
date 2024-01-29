@@ -1,0 +1,18 @@
+
+<section>
+    <h3>LEGAJO DIGITAL</h3>
+    
+    <article *ngIf="!responseInfoLegajoDigital">
+        <button  class="bpStyle-button noFill" (click)="getLastInfoLegajoDigital()">Consultar ultimo legajo</button>
+    </article>
+
+    <article *ngIf="responseInfoLegajoDigital">
+        <div class="bpStyle-card">
+            <p> <b>Fecha del Ultimo registro:</b> {{dateFileLegajoDigital}}</p>
+            <p> <b>Total de registros encontrados:</b> {{totalRecords}} </p>
+            <p> <b>Tamaño:</b>  {{sizeFileLegajoDigital}} Mb </p>
+            <button  class="bpStyle-button fill" (click)="getLegajoDigital()">Descargar ultimo legajo</button>      
+        </div>  
+    </article>
+</section>
+   

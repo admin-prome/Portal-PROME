@@ -6,6 +6,7 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { LoginGuard } from './guards/login.guard';
 import { AuthService } from './services/auth.service';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -13,12 +14,15 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent, canActivate: [LoginGuard] },
-  { path: 'reports', component: ReportsComponent, canActivate: [LoginGuard] }
+  { path: 'home', component: HomeComponent  },
+  { path: 'reports', component: ReportsComponent },
+  { path: 'herramientas', loadChildren: () => import('./modules/tools/tools.module').then(m => m.ToolsModule)}
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  
 })
 export class AppRoutingModule { }
