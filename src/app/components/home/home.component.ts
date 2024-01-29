@@ -133,7 +133,7 @@ export class HomeComponent implements OnInit{
     },
     {
       name: "Banco Provincia",
-      imgPath: "../../assets/logoBancoProvinciaSmall.png",
+      imgPath: "../../assets/logo200BP.png",
       href: "https://www.bancoprovincia.com.ar/home",
       //sectors: []
     },
@@ -168,7 +168,7 @@ export class HomeComponent implements OnInit{
       //sectors: []
     },
     {
-      name: "Canal Compliance",
+      name: "Canal Cumplimiento",
       imgPath: "../../assets/logoComplianceColor.png",
       href: "https://docs.google.com/forms/d/e/1FAIpQLSeepIYko2o1N0TE-U7qu3cBse7F09CY1TqhGv3UTVE-mrIJLg/viewform",
       //sectors: []
