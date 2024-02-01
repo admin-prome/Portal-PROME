@@ -70,3 +70,32 @@ article{
 .bpStyle-button:hover{
     color: #868686;    
 }
+
+.loader {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    position: relative;
+    background: #ffffff00;
+    box-sizing: border-box;
+    /* animation: flipX 3s linear infinite; */
+    animation: flipX 3s ease-in-out infinite;
+    }
+    
+    
+    @keyframes flipX {
+    0% {
+        transform: perspective(200px) scale(1) rotateY(0deg);
+    }
+    
+    50% {
+        transform: perspective(300px) scale(1.2) rotateY(180) ;
+    }
+    
+    100% {
+        transform: perspective(200px) scale(1) rotateY(360deg);
+    }
+    }
+
+
+        

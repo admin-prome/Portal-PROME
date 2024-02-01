@@ -1,5 +1,8 @@
 <nav class="navbar navbar-expand navbar-gradient">
     <div class="container-fluid">
+        <button class="navbar-logout-btn hvr-grow" (click)="navigateTo('home')">
+            <i class="fas fa-arrow-left"></i>
+          </button>
         <div class="w-100 navbar-nav justify-content-start navbar-username">¡Hola {{this.username}}!</div>
         <a href="https://www.provinciamicrocreditos.com.ar/">
             <div class="navbar-nav justify-content-center">
@@ -11,7 +14,6 @@
             </div>
         </a>
         <div class="w-100 navbar-nav justify-content-end">
-            <button (click)="navigateTo('home')" class="navbar-logout-btn hvr-grow"><i class="fas fa-home"></i></button>
             <button (click)="logout()" class="navbar-logout-btn hvr-grow"><i
                     class="fas fa-sign-out-alt"></i></button>
             

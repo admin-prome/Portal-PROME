@@ -44,7 +44,7 @@ export class ServiciosTecnoService {
     });
     
     // headers.append('Content-Type', 'multipart/form-data');
-    return this.http.get<any>(this.urlApi + 'portal-prome/legajo-digital/last-file', {headers: headers});
+    return this.http.get<any>(this.urlApi + 'LegajoDigital', {headers: headers});
 
   }
 }
