@@ -53,6 +53,8 @@ a{
     height: 3rem;
     background: rgba(39, 157, 46, 0);
     border-style: none;
+    color: #fff;
+    font-weight: 800;
   }
   
   .fa-sign-out-alt {
