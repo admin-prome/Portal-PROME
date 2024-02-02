@@ -60,9 +60,15 @@ export class HomeComponent implements OnInit{
       //sectors: []
     },
     {
-      name: "Google Meet",
-      imgPath: "../../assets/logoMeet.png",
-      href: "https://meet.google.com/",
+      name: "Google Drive",
+      imgPath: "../../assets/logoDrive.png",
+      href: "https://drive.google.com/drive/my-drive",
+      //sectors: []
+    },
+    {
+      name: "Gestor de Requerimientos",
+      imgPath: "../../assets/logoGestorReq.png",
+      href: "https://requerimientos.prome.ar",
       //sectors: []
     },
     {
@@ -70,13 +76,7 @@ export class HomeComponent implements OnInit{
       imgPath: "../../assets/legajoDigital.png",
       href: "../herramientas/tableros/legajo-digital",
       //sectors: []
-    },
-    {
-      name: "Google Drive",
-      imgPath: "../../assets/logoDrive.png",
-      href: "https://drive.google.com/drive/my-drive",
-      //sectors: []
-    },
+    },    
     {
       name: "Jira",
       imgPath: "../../assets/logoJira.png",

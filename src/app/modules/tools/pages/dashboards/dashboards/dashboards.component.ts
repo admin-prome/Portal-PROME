@@ -20,7 +20,6 @@ export class DashboardsComponent implements OnInit {
     ).subscribe(segments => {
       // segments es un array de segmentos de ruta
       const currentUrl = segments.join('/');
-      console.log('Ruta completa:', currentUrl);
       this.url = currentUrl;
     });
   }

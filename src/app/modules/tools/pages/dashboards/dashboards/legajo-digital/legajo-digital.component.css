@@ -35,6 +35,9 @@ article{
     background-color: #FFF;
 }
 
+.error button{
+    background-color: #aa1840;
+}
 .bpStyle-card:hover{
     transform: scale(1.02); /* Agranda el botón al 110% del tamaño original */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);

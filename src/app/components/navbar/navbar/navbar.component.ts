@@ -29,7 +29,6 @@ export class NavbarComponent {
   }
   
   ngOnInit() {
-    console.log('holaaa');
   }
 
 

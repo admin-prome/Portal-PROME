@@ -11,7 +11,7 @@ import { ServiciosTecnoService } from 'src/app/services/servicios-tecno.service'
 export class LegajoDigitalComponent {
   processedFile: any = '';
   timestamp: string = '';
-
+  errorResult: boolean = false;
   responseInfoLegajoDigital: boolean = false;
   sizeFileLegajoDigital: number = 0;
   dateFileLegajoDigital: any;
@@ -33,47 +33,17 @@ export class LegajoDigitalComponent {
     ).subscribe(segments => {
       // segments es un array de segmentos de ruta
       const currentUrl = segments.join('/');
-      console.log('Ruta completa:', currentUrl);
       this.url = currentUrl;
     });
-  }
-
-  getLastInfoLegajoDigital(){
-   
-    this.openSpinner();
-    this.serviciosTecno.getLastInfoLegajoDigital().subscribe(
-      (response) => {
-        console.log('consultando ultima fecha');
-        this.sizeFileLegajoDigital = 10;
-        this.dateFileLegajoDigital= '17-12-23';
-        this.totalRecords = 560;
-        this.responseInfoLegajoDigital = true;
-        this.closeSpinner();
-      },
-      (error) => {
-        console.log('Ocurrio un error al consultar ultima fecha legajo ', error);
-        this.responseInfoLegajoDigital = true;
-        this.closeSpinner();
-      }
-
-    );
-
-    this.responseInfoLegajoDigital = true;
-    this.sizeFileLegajoDigital = 10;
-    this.dateFileLegajoDigital= '17-12-23';
-    this.totalRecords = 560;
-    this.responseInfoLegajoDigital = true;
   }
 
   getLegajoDigital() {
     this.openSpinner();
     this.timestamp = this.getTimestamp();
-    console.log('Obteniendo legajo digital')
     this.serviciosTecno.getLastFileLegajoDigital().subscribe(
       (response) => {          
           this.responseInfoLegajoDigital = true;
           const contentType = response.ContentType;
-          console.log(response.result.fileName);
           if (response.result.contentType === 'text/csv') {
 
               const byteCharacters = atob(response.result.data);               
@@ -85,26 +55,23 @@ export class LegajoDigitalComponent {
 
               const byteArray = new Uint8Array(byteNumbers);              
               const blob = new Blob([byteArray], { type: contentType });
-              this.processedFile = blob;
-              //this.displaySnackbar('Su consulta fue resuelta con EXITO');
-              // this.totalRecords = 560;
-              // this.sizeFileLegajoDigital = 10;
+              this.processedFile = blob;        
               this.dateFileLegajoDigital= this.getDateFromFileName(response.result.fileName);
               this.fileDownloadName = response.result.fileName;
              
               this.responseInfoLegajoDigital = true;
+              this.errorResult = false;
               this.closeSpinner();             
           }   
 
           else {
-                  //this.displaySnackbar('La respuesta del servidor no es un archivo XLSX válido.');
+            this.errorResult = true;
               }
           this.closeSpinner();
           },
        
       (error) => {
-       
-        console.log('Ocurrio un error: ', error);
+        this.errorResult = true;
         this.closeSpinner();
         
       }
