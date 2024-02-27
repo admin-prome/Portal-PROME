@@ -4,7 +4,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { LoginGuard } from './guards/login.guard';
-import { AuthService } from './services/auth.service';
 
 
 const routes: Routes = [
