@@ -1,0 +1,38 @@
+
+<section>
+    <h3>LEGAJO DIGITAL</h3>
+    
+    <span class="loader" *ngIf="loading"><img src="../../../../../../../assets/logoColorP.png" alt="" width="80px"></span>
+    
+    <div *ngIf="!loading">
+        <article *ngIf="!responseInfoLegajoDigital">
+            <div *ngIf="!errorResult">
+                <button class="bpStyle-button noFill" (click)="getLegajoDigital()">Consultar ultimo legajo</button>
+            </div>
+            <div class="bpStyle-card error" *ngIf="errorResult">                
+                <p>Ocurrio un error al consultar</p>
+                <button  class="bpStyle-button fill" (click)="getLegajoDigital()">Volver a consultar</button>      
+            </div>  
+        </article>
+
+        <article *ngIf="responseInfoLegajoDigital">
+            <div class="bpStyle-card" *ngIf="!errorResult">
+                <p> <b>Fecha del Ultimo registro:</b> {{dateFileLegajoDigital}}</p>
+                <!-- <p> <b>Total de registros encontrados:</b> {{totalRecords}} </p>
+                <p> <b>Tamaño:</b>  {{sizeFileLegajoDigital}} Mb </p> -->
+                <button  class="bpStyle-button fill" (click)="downloadProcessedFile()">Descargar ultimo legajo</button>      
+            </div>  
+
+            <div class="bpStyle-card" *ngIf="errorResult">
+                <p> <b>Fecha del Ultimo registro:</b> {{dateFileLegajoDigital}}</p>
+                <p>Ocurrio un error al consultar</p>
+                <button  class="bpStyle-button fill" (click)="getLegajoDigital()">Volver a consultar</button>      
+            </div>  
+
+
+        </article>
+
+       
+    </div>
+</section>
+   

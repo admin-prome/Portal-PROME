@@ -10,3 +10,9 @@
 body {
     background-color: #E5E5E5;
 }
+
+:root {
+    --colorPrimario: #279D2E;
+    --colorSecundario: #25B4BD;
+    --colorTerciario: #3C3C3B;
+  }
