@@ -48,21 +48,21 @@ export class HomeComponent implements OnInit{
 
   public sitesList: Array<Site> = [
     {
-      name: "Gmail",
-      imgPath: "../../assets/logoGmail.png",
-      href: "http://www.gmail.com",
+      name: "Outlook",
+      imgPath: "../../assets/logoOutlook.png",
+      href: "https://outlook.office.com/mail/",
       //sectors: ["Tecnología", "Desarrolo De Sistemas"]
     },
     {
-      name: "Calendario",
-      imgPath: "../../assets/logoCalendar.png",
-      href: "https://calendar.google.com/calendar/u/0/r?tab=mc",
+      name: "Teams",
+      imgPath: "../../assets/logoTeams.png",
+      href: "https://teams.microsoft.com/v2/",
       //sectors: []
     },
     {
-      name: "Google Drive",
-      imgPath: "../../assets/logoDrive.png",
-      href: "https://drive.google.com/drive/my-drive",
+      name: "SharePoint",
+      imgPath: "../../assets/logoSharePoint.png",
+      href: "https://provinciamicroempresas.sharepoint.com/_layouts/15/sharepoint.aspx",
       //sectors: []
     },
     {
