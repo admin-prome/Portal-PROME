@@ -12,16 +12,16 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full',
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent, canActivate: [LoginGuard]  },
-  { path: 'reports', component: ReportsComponent, canActivate: [LoginGuard] },
-  { path: 'herramientas', loadChildren: () => import('./modules/tools/tools.module').then(m => m.ToolsModule), canActivate: [LoginGuard]}
+  //{ path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'reports', component: ReportsComponent },
+  { path: 'herramientas', loadChildren: () => import('./modules/tools/tools.module').then(m => m.ToolsModule) }
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  
+
 })
 export class AppRoutingModule { }
