@@ -51,128 +51,186 @@ export class HomeComponent implements OnInit{
       name: "Outlook",
       imgPath: "../../assets/logoOutlook.png",
       href: "https://outlook.office.com/mail/",
-      //sectors: ["Tecnología", "Desarrolo De Sistemas"]
+      //sectors: ["Tecnología", "Desarrolo De Sistemas"],
+      target:"_blank"
     },
     {
       name: "Teams",
       imgPath: "../../assets/logoTeams.png",
       href: "https://teams.microsoft.com/v2/",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "SharePoint",
       imgPath: "../../assets/logoSharePoint.png",
       href: "https://provinciamicroempresas.sharepoint.com/_layouts/15/sharepoint.aspx",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
+    },
+    {
+      name: "Planner",
+      imgPath: "../../assets/logoPlanner.png",
+      href: "https://tasks.office.com/prome.ar/es-ES/Home/Planner/",
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Gestor de Requerimientos",
       imgPath: "../../assets/logoGestorReq.png",
       href: "https://requerimientos.prome.ar",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Legajo Digital",
       imgPath: "../../assets/legajoDigital.png",
       href: "../herramientas/tableros/legajo-digital",
-      //sectors: []
+      //sectors: [], 
+      target:"_self"
     },    
     {
       name: "Jira",
       imgPath: "../../assets/logoJira.png",
       href: "https://provinciamicroempresas.atlassian.net/jira/your-work",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Go!",
       imgPath: "../../assets/logoGo.png",
       href: "https://promesa.gointegro.com/gosocial/company/stream",
-      //sectors: []
+      
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Visma",
       imgPath: "../../assets/logoVisma.png",
       href: "https://payroll.vismalatam.com/rhprox2/newhome/selfservice.aspx?idp=provinciamicroempresas&tenant=provinciamicroempresas",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Tu Recibo",
       imgPath: "../../assets/logoTuRecibo.png",
       href: "https://promesa.turecibo.com/e/login",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Rendiciones",
       imgPath: "../../assets/logoRendiciones.png",
       href: "http://rendicion.provinciamicroempresas.com/",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Calipso",
       imgPath: "../../assets/logoCalipso.png",
       href: "https://baproprod.calipso.work/loginServlet",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "SAN Responde",
       imgPath: "../../assets/logoSan.png",
       href: "https://sites.google.com/provinciamicrocreditos.com/sanresponde/inicio",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "CRM",
       imgPath: "../../assets/logoCRM.png",
       href: "https://365.provinciamicroempresas.com",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Reportes",
       imgPath: "../../assets/logoBI.png",
       href: "../reports",
-      //sectors: []
+      //sectors: [], 
+      target:"_self"
     },
     {
       name: "Banco Provincia",
       imgPath: "../../assets/logo200BP.png",
       href: "https://www.bancoprovincia.com.ar/home",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Provincia Microcréditos",
       imgPath: "../../assets/logoColorPSmall.png",
       href: "https://www.provinciamicrocreditos.com.ar/",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Campus Virtual",
       imgPath: "../../assets/logoCampus.png",
       href: "https://campus.provinciamicrocreditos.com",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Comunidad Prome",
       imgPath: "../../assets/logoComunidadPromeVertical.png",
       href: "https://www.provinciamicrocreditos.com.ar/comunidad/comunidad-prome/",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Guia PROME",
       imgPath: "../../assets/logoGP.png",
       href: "https://guia.provinciamicrocreditos.com/",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Perfomap",
       imgPath: "../../assets/logoPerfomap.png",
       href: "https://provinciamicrocreditos.perfomap.com/",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
     {
       name: "Canal Cumplimiento",
       imgPath: "../../assets/logoComplianceColor.png",
       href: "https://docs.google.com/forms/d/e/1FAIpQLSeepIYko2o1N0TE-U7qu3cBse7F09CY1TqhGv3UTVE-mrIJLg/viewform",
-      //sectors: []
+      //sectors: [], 
+      target:"_blank"
     },
+    {
+      name: "Cronopagos Vigentes",
+      imgPath: "../../assets/logoCronopagos.png",
+      href: "https://provinciamicroempresas.sharepoint.com/:f:/s/Procesos1/Euz2uYKi9exNqHdBjVNUvzcBfSAruuzWupW338bCRp0r3A?e=osuvMa",
+      //sectors: [], 
+      target:"_blank"
+    },
+    {
+      name: "Documentos y Formularios BPBA",
+      imgPath: "../../assets/logoDocumentoYFormulariosBPBA.png",
+      href: "https://provinciamicroempresas.sharepoint.com/:f:/s/Procesos1/EsZIFfHeXF1Jrd7S-hjmAIABSKvuavE20oHXW_Y7RapLnQ?e=p23c1e",
+      //sectors: [], 
+      target:"_blank"
+    },
+    {
+      name: "Documentos y Normativas",
+      imgPath: "../../assets/logoDocumentoYNormativas.png",
+      href: "https://provinciamicroempresas.sharepoint.com/:f:/s/Procesos1/EhvpQj9zGAlFrkhC1hCQJmYBHxIa09yFwHOonKaLHgMt9g?e=GT7ed5",
+      //sectors: [], 
+      target:"_blank"
+    },
+    {
+      name: "Formularios Prome",
+      imgPath: "../../assets/logoFormulariosProme.png",
+      href: "https://provinciamicroempresas.sharepoint.com/:f:/s/Procesos1/EgQbj1e7-ZhMvmjEiJNSF7MBGEA2HABXB0q6PRs-tSw47g?e=3dNbu0",
+      //sectors: [], 
+      target:"_blank"
+    },
+   
   ];
 
   ngOnInit() {

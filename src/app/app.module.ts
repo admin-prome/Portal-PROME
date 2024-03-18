@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar/navbar.component';
+import { DocumentsComponent } from './components/documents/documents.component';
 
 
 // import { LoginComponent } from './login/login.component';
@@ -17,7 +18,8 @@ import { NavbarComponent } from './components/navbar/navbar/navbar.component';
     AppComponent,
     // LoginComponent,
     HomeComponent,
-    ReportsComponent
+    ReportsComponent,
+    DocumentsComponent
   ],
   imports: [
     BrowserModule,
