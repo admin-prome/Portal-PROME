@@ -90,13 +90,6 @@ export class HomeComponent implements OnInit{
       target:"_self"
     },    
     {
-      name: "Jira",
-      imgPath: "../../assets/logoJira.png",
-      href: "https://provinciamicroempresas.atlassian.net/jira/your-work",
-      //sectors: [], 
-      target:"_blank"
-    },
-    {
       name: "Go!",
       imgPath: "../../assets/logoGo.png",
       href: "https://promesa.gointegro.com/gosocial/company/stream",
@@ -119,19 +112,41 @@ export class HomeComponent implements OnInit{
       target:"_blank"
     },
     {
+      name: "Cronopagos Vigentes",
+      imgPath: "../../assets/logoCronopagos.png",
+      href: "https://provinciamicroempresas.sharepoint.com/:f:/r/sites/Procesos1/Documentos%20compartidos/Procesos%20Prome/Cronopagos%20Vigentes?csf=1&web=1&e=aH0SoR",
+      //sectors: [], 
+      target:"_blank"
+    },
+    {
+      name: "Documentos y Formularios BPBA",
+      imgPath: "../../assets/logoDocumentoYFormulariosBPBA.png",
+      href: "https://provinciamicroempresas.sharepoint.com/:f:/r/sites/Procesos1/Documentos%20compartidos/Procesos%20Prome/Documentos%20y%20Formularios%20BPBA?csf=1&web=1&e=gFiU2y",
+      //sectors: [], 
+      target:"_blank"
+    },
+    {
+      name: "Documentos y Normativas",
+      imgPath: "../../assets/logoDocumentoYNormativas.png",
+      href: "https://provinciamicroempresas.sharepoint.com/:f:/r/sites/Procesos1/Documentos%20compartidos/Procesos%20Prome/Documentos%20y%20Normativas?csf=1&web=1&e=5mQvco",
+      //sectors: [], 
+      target:"_blank"
+    },
+    {
+      name: "Formularios Prome",
+      imgPath: "../../assets/logoFormulariosProme.png",
+      href: "https://provinciamicroempresas.sharepoint.com/:f:/r/sites/Procesos1/Documentos%20compartidos/Procesos%20Prome/Formularios%20Prome?csf=1&web=1&e=YIlULJ",
+      //sectors: [], 
+      target:"_blank"
+    },
+    {
       name: "Rendiciones",
       imgPath: "../../assets/logoRendiciones.png",
       href: "http://rendicion.provinciamicroempresas.com/",
       //sectors: [], 
       target:"_blank"
     },
-    {
-      name: "Calipso",
-      imgPath: "../../assets/logoCalipso.png",
-      href: "https://baproprod.calipso.work/loginServlet",
-      //sectors: [], 
-      target:"_blank"
-    },
+   
     {
       name: "SAN Responde",
       imgPath: "../../assets/logoSan.png",
@@ -145,28 +160,7 @@ export class HomeComponent implements OnInit{
       href: "https://365.provinciamicroempresas.com",
       //sectors: [], 
       target:"_blank"
-    },
-    {
-      name: "Reportes",
-      imgPath: "../../assets/logoBI.png",
-      href: "../reports",
-      //sectors: [], 
-      target:"_self"
-    },
-    {
-      name: "Banco Provincia",
-      imgPath: "../../assets/logo200BP.png",
-      href: "https://www.bancoprovincia.com.ar/home",
-      //sectors: [], 
-      target:"_blank"
-    },
-    {
-      name: "Provincia Microcréditos",
-      imgPath: "../../assets/logoColorPSmall.png",
-      href: "https://www.provinciamicrocreditos.com.ar/",
-      //sectors: [], 
-      target:"_blank"
-    },
+    },   
     {
       name: "Campus Virtual",
       imgPath: "../../assets/logoCampus.png",
@@ -203,33 +197,41 @@ export class HomeComponent implements OnInit{
       target:"_blank"
     },
     {
-      name: "Cronopagos Vigentes",
-      imgPath: "../../assets/logoCronopagos.png",
-      href: "https://provinciamicroempresas.sharepoint.com/:f:/s/Procesos1/Euz2uYKi9exNqHdBjVNUvzcBfSAruuzWupW338bCRp0r3A?e=osuvMa",
+      name: "Calipso",
+      imgPath: "../../assets/logoCalipso.png",
+      href: "https://baproprod.calipso.work/loginServlet",
       //sectors: [], 
       target:"_blank"
     },
     {
-      name: "Documentos y Formularios BPBA",
-      imgPath: "../../assets/logoDocumentoYFormulariosBPBA.png",
-      href: "https://provinciamicroempresas.sharepoint.com/:f:/s/Procesos1/EsZIFfHeXF1Jrd7S-hjmAIABSKvuavE20oHXW_Y7RapLnQ?e=p23c1e",
+      name: "Jira",
+      imgPath: "../../assets/logoJira.png",
+      href: "https://provinciamicroempresas.atlassian.net/jira/your-work",
       //sectors: [], 
       target:"_blank"
     },
     {
-      name: "Documentos y Normativas",
-      imgPath: "../../assets/logoDocumentoYNormativas.png",
-      href: "https://provinciamicroempresas.sharepoint.com/:f:/s/Procesos1/EhvpQj9zGAlFrkhC1hCQJmYBHxIa09yFwHOonKaLHgMt9g?e=GT7ed5",
+      name: "Reportes",
+      imgPath: "../../assets/logoBI.png",
+      href: "../reports",
+      //sectors: [], 
+      target:"_self"
+    }, 
+    {
+      name: "Banco Provincia",
+      imgPath: "../../assets/logo200BP.png",
+      href: "https://www.bancoprovincia.com.ar/home",
       //sectors: [], 
       target:"_blank"
     },
     {
-      name: "Formularios Prome",
-      imgPath: "../../assets/logoFormulariosProme.png",
-      href: "https://provinciamicroempresas.sharepoint.com/:f:/s/Procesos1/EgQbj1e7-ZhMvmjEiJNSF7MBGEA2HABXB0q6PRs-tSw47g?e=3dNbu0",
+      name: "Provincia Microcréditos",
+      imgPath: "../../assets/logoColorPSmall.png",
+      href: "https://www.provinciamicrocreditos.com.ar/",
       //sectors: [], 
       target:"_blank"
     },
+    
    
   ];
 
