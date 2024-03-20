@@ -44,7 +44,7 @@ export class LegajoDigitalComponent {
       (response) => {          
           this.responseInfoLegajoDigital = true;
           const contentType = response.ContentType;
-          if (response.result.contentType === 'text/csv') {
+          if (response.result.contentType === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
 
               const byteCharacters = atob(response.result.data);               
               const byteNumbers = new Array(byteCharacters.length);
@@ -126,18 +126,15 @@ export class LegajoDigitalComponent {
 
 
   getDateFromFileName(nombreArchivo: string): string | null {
-   
-    const match = nombreArchivo.match(/_(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})\.csv/)
+    const match = nombreArchivo.match(/_(\d{4})(\d{2})(\d{2})\./);
     if (match) {
-     
-      const [, anio, mes, dia, hora, minutos] = match;
-      const fechaFormateada = `${dia}/${mes}/${anio}`;
-  
-      return fechaFormateada;
+        const [, anio, mes, dia] = match;
+        const fechaFormateada = `${dia}/${mes}/${anio}`;
+        return fechaFormateada;
     } else {
-      return 'No se encontro la fecha';
+        return 'No se encontró la fecha';
     }
-  }
+}
   
 
 }
